@@ -41,3 +41,32 @@ server.listen(8000)
 
 
 /* Express Ch2 */
+/* const express = require('express') //require express module
+const app = express() //calls express function to start new express calls
+app.listen(3000, () => {
+    console.log("Hello World port 3000");
+})
+=> => outputs hello world port 3000 */
+
+/* const express = require('express') //calls express module
+const app = express() //calls express function to start new express calls
+app.listen(3000, () => {
+    console.log("Hello World port 3000")
+})
+
+app.get('/', (req, res) => {
+    res.json({
+        name: 'geethika'
+    })
+//this is known as routing this is how u build an api
+}) */
+
+/* const path = require('path')
+const express = require('express') //calls express module
+const app = express() //calls express function to start new express calls
+app.listen(3000, () => {
+    console.log("Hello World port 3000")
+})
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'about.html')) //to make it operatable with all os
+}) */
