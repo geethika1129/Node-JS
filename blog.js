@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
 //this is known as routing this is how u build an api
 }) */
 
-const path = require('path')
+/* const path = require('path')
 const express = require('express') //calls express module
 const app = express() //calls express function to start new express calls
 app.listen(1080, () => {
@@ -69,15 +69,28 @@ app.listen(1080, () => {
 })
 app.get('/', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'about.html')) //to make it operatable with all os
-    })
-    //change the port to get result when ever u receive the error error cant get
+    }) */
+//change the port to get result when ever u receive the error error cant get
+
 
 
 //using public 
-const express = require('express') //calls express module
+/* const express = require('express') //calls express module
 const app = express()
 const path = require('path')
 app.use(express.static('public'))
 app.listen(8000, () => {
     console.log("Hello World 2003 here");
+}) */
+
+//ejs
+const express = require('express')
+const path = require('path')
+const app = new express()
+const ejs = require('ejs')
+app.set('view engine', 'ejs')
+app.listen(8000, () => {
+    app.get('/', (req, res) => {
+        res.render('about')
+    })
 })
