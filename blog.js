@@ -84,7 +84,7 @@ app.listen(8000, () => {
 }) */
 
 //ejs
-const express = require('express')
+/* const express = require('express')
 const path = require('path')
 const app = new express()
 const ejs = require('ejs')
@@ -93,4 +93,17 @@ app.listen(8000, () => {
     app.get('/', (req, res) => {
         res.render('about')
     })
-})
+}) */
+
+
+//mongoose
+/* const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost/my_database', { useNewUrlParser: true })
+    //defining models
+const BlogPostSchema = new Schema({
+    title: String,
+    body: String
+});
+//collection
+const BlogPost = mongoose.model('BlogPost', BlogPostSchema)
+module.exports = BlogPost */
