@@ -132,3 +132,54 @@ n=5
 for i in range(1,n+1):
     print('cube of:'+str(i )+'is :'+str(i*i*i))  """
 
+""" import random
+def Rand(start, end, num):
+  res = []
+  for j in range(num):
+    res.append(random.randint(start, end))
+  return res
+# Driver Code
+num = 10
+start = 20
+end = 40
+print(type(Rand))
+print(Rand(start, end, num)) """
+
+""" n=5
+sum=0
+for i in range(n+1):
+    sum+=i
+print(sum) """
+
+# import required packages
+import sqlite3
+# Create a connection anf cursor
+con = sqlite3.connect(&#39;file4.db&#39;)
+c = con.cursor()
+# create a function to print the whole table:
+def printall():
+global c
+for row in c.execute(&quot;SELECT * FROM datatable&quot;):
+print(row)
+
+# Create a sample table and insert data into it:
+c.execute(&quot;CREATE TABLE datatable(ID INTEGER,Name TEXT);&quot;)
+# INSERT
+namelist = [(1,&#39;Aman&#39;),(2,&#39;Aviraj&#39;),(3,&#39;Venkat&#39;)]
+c.executemany(&quot;INSERT INTO datatable VALUES(?,?)&quot;,namelist)
+con.commit()
+print(&quot;\nInitial table: &quot;)
+printall()
+# DELETE
+print(&quot;\nDeleting an enrty : (3,Venkat)&quot;)
+c.execute(&quot;DELETE FROM datatable WHERE Name = &#39;Venkat&#39;;&quot;)
+print(&quot;\nTable is now: &quot;)
+printall()
+# UPDATE
+print(&quot;\nUpdating a name to full name:&quot;)
+print(&quot;\nTable is now: &quot;)
+c.execute(&quot;UPDATE datatable SET Name=&#39;AMAN BHAI PATEL&#39; WHERE ID=1;&quot;)
+printall()
+
+
+  
