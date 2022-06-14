@@ -92,4 +92,37 @@ while user != end:
 if user == end:
  print("End of Report") """
 
- 
+ #2+22+222..........
+""" terms=5
+sum=0
+for i in range(terms+1):
+    sum+=i """
+
+""" def unique(l):
+  x=[]
+  for i in l:
+      if x not in l:
+          x.append(i)
+          return x
+list=[1,2,3,4,1,2]
+k=unique(list)
+print(k) """
+
+""" def make_bold(fn):
+ def wrapped():
+  return "<b>" + fn() + "</b>"
+ return wrapped
+def make_italic(fn):
+ def wrapped():
+   return "<i>" + fn() + "</i>"
+ return wrapped
+def make_underline(fn):
+ def wrapped():
+   return "<u>" + fn() + "</u>"
+ return wrapped
+@make_bold
+@make_italic
+@make_underline
+def hello():
+ return "hello world"
+print(hello()) """
