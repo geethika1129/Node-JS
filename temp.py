@@ -126,3 +126,9 @@ def make_underline(fn):
 def hello():
  return "hello world"
 print(hello()) """
+
+""" 
+n=5
+for i in range(1,n+1):
+    print('cube of:'+str(i )+'is :'+str(i*i*i))  """
+
